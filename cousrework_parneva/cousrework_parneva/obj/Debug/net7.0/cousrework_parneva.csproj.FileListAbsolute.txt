@@ -12,3 +12,20 @@ C:\Users\russi\OneDrive\Рабочий стол\Object_lang\cousrework_parneva\c
 C:\Users\russi\OneDrive\Рабочий стол\Object_lang\cousrework_parneva\cousrework_parneva\obj\Debug\net7.0\cousrework_parneva.pdb
 C:\Users\russi\OneDrive\Рабочий стол\Object_lang\cousrework_parneva\cousrework_parneva\obj\Debug\net7.0\cousrework_parneva.genruntimeconfig.cache
 C:\Users\russi\OneDrive\Рабочий стол\Object_lang\cousrework_parneva\cousrework_parneva\obj\Debug\net7.0\ref\cousrework_parneva.dll
+C:\Users\russi\OneDrive\Рабочий стол\Object_lang\курсовая 1 с 2 к парнева\coursework\cousrework_parneva\cousrework_parneva\bin\Debug\net7.0\cousrework_parneva.exe
+C:\Users\russi\OneDrive\Рабочий стол\Object_lang\курсовая 1 с 2 к парнева\coursework\cousrework_parneva\cousrework_parneva\bin\Debug\net7.0\cousrework_parneva.deps.json
+C:\Users\russi\OneDrive\Рабочий стол\Object_lang\курсовая 1 с 2 к парнева\coursework\cousrework_parneva\cousrework_parneva\bin\Debug\net7.0\cousrework_parneva.runtimeconfig.json
+C:\Users\russi\OneDrive\Рабочий стол\Object_lang\курсовая 1 с 2 к парнева\coursework\cousrework_parneva\cousrework_parneva\bin\Debug\net7.0\cousrework_parneva.dll
+C:\Users\russi\OneDrive\Рабочий стол\Object_lang\курсовая 1 с 2 к парнева\coursework\cousrework_parneva\cousrework_parneva\bin\Debug\net7.0\cousrework_parneva.pdb
+C:\Users\russi\OneDrive\Рабочий стол\Object_lang\курсовая 1 с 2 к парнева\coursework\cousrework_parneva\cousrework_parneva\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\russi\OneDrive\Рабочий стол\Object_lang\курсовая 1 с 2 к парнева\coursework\cousrework_parneva\cousrework_parneva\obj\Debug\net7.0\cousrework_parneva.csproj.AssemblyReference.cache
+C:\Users\russi\OneDrive\Рабочий стол\Object_lang\курсовая 1 с 2 к парнева\coursework\cousrework_parneva\cousrework_parneva\obj\Debug\net7.0\cousrework_parneva.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\russi\OneDrive\Рабочий стол\Object_lang\курсовая 1 с 2 к парнева\coursework\cousrework_parneva\cousrework_parneva\obj\Debug\net7.0\cousrework_parneva.AssemblyInfoInputs.cache
+C:\Users\russi\OneDrive\Рабочий стол\Object_lang\курсовая 1 с 2 к парнева\coursework\cousrework_parneva\cousrework_parneva\obj\Debug\net7.0\cousrework_parneva.AssemblyInfo.cs
+C:\Users\russi\OneDrive\Рабочий стол\Object_lang\курсовая 1 с 2 к парнева\coursework\cousrework_parneva\cousrework_parneva\obj\Debug\net7.0\cousrework_parneva.csproj.CoreCompileInputs.cache
+C:\Users\russi\OneDrive\Рабочий стол\Object_lang\курсовая 1 с 2 к парнева\coursework\cousrework_parneva\cousrework_parneva\obj\Debug\net7.0\cousrework_parneva.csproj.CopyComplete
+C:\Users\russi\OneDrive\Рабочий стол\Object_lang\курсовая 1 с 2 к парнева\coursework\cousrework_parneva\cousrework_parneva\obj\Debug\net7.0\cousrework_parneva.dll
+C:\Users\russi\OneDrive\Рабочий стол\Object_lang\курсовая 1 с 2 к парнева\coursework\cousrework_parneva\cousrework_parneva\obj\Debug\net7.0\refint\cousrework_parneva.dll
+C:\Users\russi\OneDrive\Рабочий стол\Object_lang\курсовая 1 с 2 к парнева\coursework\cousrework_parneva\cousrework_parneva\obj\Debug\net7.0\cousrework_parneva.pdb
+C:\Users\russi\OneDrive\Рабочий стол\Object_lang\курсовая 1 с 2 к парнева\coursework\cousrework_parneva\cousrework_parneva\obj\Debug\net7.0\cousrework_parneva.genruntimeconfig.cache
+C:\Users\russi\OneDrive\Рабочий стол\Object_lang\курсовая 1 с 2 к парнева\coursework\cousrework_parneva\cousrework_parneva\obj\Debug\net7.0\ref\cousrework_parneva.dll

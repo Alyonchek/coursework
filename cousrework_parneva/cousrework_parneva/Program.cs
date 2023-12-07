@@ -14,15 +14,19 @@ class Program
         //создание примера тренера
         Trainer trainer = new Trainer(username, password);
 
+        // сохранение данных в файл
+        trainer.LoadFromFile();
+
+
         //основной цикл программы
         while (true)
         {
             Console.WriteLine("Выберите действие:");
             Console.WriteLine("1. Вход тренера");
-            /*Console.WriteLine("2. Регистрация нового подопечного");
+            Console.WriteLine("2. Регистрация нового подопечного");
             Console.WriteLine("3. Просмотреть список подопечных");
             Console.WriteLine("4. Редактировать данные подопечного");
-            Console.WriteLine("5. Удалить данные подопечного");*/
+            Console.WriteLine("5. Удалить данные подопечного");
             Console.WriteLine("2. Выход");
 
             string choice = Console.ReadLine();
@@ -45,6 +49,7 @@ class Program
                     RemoveClient(trainer);
                     break;*/
                 case "2":
+                    trainer.SaveToFile();
                     Environment.Exit(0);
                     break;
                 default:
@@ -82,7 +87,7 @@ class Program
             Console.WriteLine("2. Просмотреть список подопечных");
             Console.WriteLine("3. Редактировать данные подопечных");
             Console.WriteLine("4. Удалить данные подопечного");
-            Console.WriteLine("5. Выход");
+            Console.WriteLine("5. Сохранить и выйти");
 
             string choice = Console.ReadLine();
 
@@ -101,6 +106,9 @@ class Program
                     RemoveClient(trainer);
                     break;
                 case "5":
+                    // Сохранение данных в файл перед выходом
+                    trainer.SaveToFile();
+
                     Environment.Exit(0);
                     break;
                 default:
@@ -130,7 +138,7 @@ class Program
 
         Console.WriteLine("Подопечный добавлен успешно!");
     }
-    
+
     //редактиривание данных подопечного
     static void EditClient(Trainer trainer)
     {

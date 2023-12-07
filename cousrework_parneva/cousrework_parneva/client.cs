@@ -35,4 +35,5 @@ namespace cousrework_parneva
             return $"Имя: {Name}, Возраст: {Age}, Цель тренировок: {FitnessGoal}";
         }
     }
+    
 }

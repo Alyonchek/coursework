@@ -1,5 +1,6 @@
 ﻿using cousrework_parneva;
 using System;
+using System.IO;
 
 class Program
 {
@@ -11,22 +12,17 @@ class Program
         Console.WriteLine("Введите пароль тренера:");
         string password = Console.ReadLine();
 
-        //создание примера тренера
+        // создание примера тренера
         Trainer trainer = new Trainer(username, password);
 
         // сохранение данных в файл
-        trainer.LoadFromFile();
+        FileManager.LoadFromFile($"{username}.txt", trainer);
 
-
-        //основной цикл программы
+        // основной цикл программы
         while (true)
         {
             Console.WriteLine("Выберите действие:");
             Console.WriteLine("1. Вход тренера");
-            Console.WriteLine("2. Регистрация нового подопечного");
-            Console.WriteLine("3. Просмотреть список подопечных");
-            Console.WriteLine("4. Редактировать данные подопечного");
-            Console.WriteLine("5. Удалить данные подопечного");
             Console.WriteLine("2. Выход");
 
             string choice = Console.ReadLine();
@@ -34,22 +30,10 @@ class Program
             switch (choice)
             {
                 case "1":
-                    Login(trainer);
+                    Login(trainer, username);
                     break;
-                /*case "2":
-                    AddClient(trainer);
-                    break;
-                case "3":
-                    trainer.DisplayClients();
-                    break;
-                case "4":
-                    EditClient(trainer);
-                    break;
-                case "5":
-                    RemoveClient(trainer);
-                    break;*/
                 case "2":
-                    trainer.SaveToFile();
+                    FileManager.SaveToFile($"{username}.txt", trainer);
                     Environment.Exit(0);
                     break;
                 default:
@@ -59,17 +43,17 @@ class Program
         }
     }
 
-    //вход тренера
-    static void Login(Trainer trainer)
+    // вход тренера
+    static void Login(Trainer trainer, string username)
     {
         Console.WriteLine("Введите пароль тренера:");
         string enteredPassword = Console.ReadLine();
 
-        //проверка пароля тренера
+        // проверка пароля тренера
         if (trainer.Authenticate(enteredPassword))
         {
             Console.WriteLine("Вход выполнен успешно!");
-            TrainerMenu(trainer);
+            TrainerMenu(trainer, username);
         }
         else
         {
@@ -77,8 +61,8 @@ class Program
         }
     }
 
-    //меню тренера с доступными действиями
-    static void TrainerMenu(Trainer trainer)
+    // меню тренера с доступными действиями
+    static void TrainerMenu(Trainer trainer, string username)
     {
         while (true)
         {
@@ -107,8 +91,7 @@ class Program
                     break;
                 case "5":
                     // Сохранение данных в файл перед выходом
-                    trainer.SaveToFile();
-
+                    FileManager.SaveToFile($"{username}.txt", trainer);
                     Environment.Exit(0);
                     break;
                 default:
@@ -118,7 +101,7 @@ class Program
         }
     }
 
-    //добавление подопечного
+    // добавление подопечного
     static void AddClient(Trainer trainer)
     {
         Console.WriteLine("Введите имя подопечного:");
@@ -139,10 +122,10 @@ class Program
         Console.WriteLine("Подопечный добавлен успешно!");
     }
 
-    //редактиривание данных подопечного
+    // редактирование данных подопечного
     static void EditClient(Trainer trainer)
     {
-        Console.WriteLine("Введите индекс(начиная с 0) подопечного для редактирования:");
+        Console.WriteLine("Введите индекс (начиная с 0) подопечного для редактирования:");
         int index;
         while (!int.TryParse(Console.ReadLine(), out index))
         {
@@ -165,7 +148,7 @@ class Program
         trainer.EditClient(index, newName, newAge, newFitnessGoal);
     }
 
-    //удаление записи о подопечном
+    // удаление записи о подопечном
     static void RemoveClient(Trainer trainer)
     {
         Console.WriteLine("Введите индекс (начиная с 0) подопечного для удаления:");
@@ -178,4 +161,3 @@ class Program
         trainer.RemoveClient(index);
     }
 }
-

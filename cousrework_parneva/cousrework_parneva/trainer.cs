@@ -10,10 +10,9 @@ namespace cousrework_parneva
     // Класс, представляющий тренера
     public class Trainer
     {
-        public string Username { get; private set; }
-        private string EncodedPassword { get; set; } // Encoded password for security
+        public string Username { get;  set; }
+        public string EncodedPassword { get; set; }
         private List<Client> clients;
-
         // Конструктор класса Trainer
         public Trainer(string username, string password)
         {
@@ -21,8 +20,7 @@ namespace cousrework_parneva
             EncodedPassword = Convert.ToBase64String(Encoding.UTF8.GetBytes(password));
             clients = new List<Client>();
         }
-
-        //Метод для аутентификации тренера
+        //Метод для аутентификации тренера            
         public bool Authenticate(string enteredPassword)
         {
             return EncodedPassword == Convert.ToBase64String(Encoding.UTF8.GetBytes(enteredPassword));
@@ -67,42 +65,16 @@ namespace cousrework_parneva
                 Console.WriteLine("Некорректный индекс клиента.");
             }
         }
-        //метод для сохранения данных тренера и подопечного в файл
-        public void SaveToFile()
-        {
-            using (StreamWriter writer = new StreamWriter($"{Username}_data.txt"))
-            {
-                writer.WriteLine(Username);
-                writer.WriteLine(EncodedPassword);
 
-                foreach (var client in clients)
-                {
-                    writer.WriteLine($"{client.Name},{client.Age},{client.FitnessGoal}");
-                }
-            }
-        }
-        //метод, который загружает данные тренера и его подопечных из файла
-        public void LoadFromFile()
+        public List<Client> GetClients()
         {
-            string fileName = $"{Username}_data.txt";
-            if (File.Exists(fileName))
-            {
-                clients.Clear();
-                using (StreamReader reader = new StreamReader(fileName))
-                {
-                    Username = reader.ReadLine();
-                    EncodedPassword = reader.ReadLine();
-
-                    while (!reader.EndOfStream)
-                    {
-                        string[] clientData = reader.ReadLine().Split(',');
-                        if (clientData.Length == 3 && int.TryParse(clientData[1], out int age))
-                        {
-                            clients.Add(new Client(clientData[0], age, clientData[2]));
-                        }
-                    }
-                }
-            }
+            return clients;
         }
-    }
+
+        public void ClearClients()
+        {
+            clients.Clear();
+        }
+    
+    }     
 }
